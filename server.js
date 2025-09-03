@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: "https://thepillz-ab9m95ya5-georginio397s-projects.vercel.app",
+  origin: "https://thepillz.vercel.app",
   credentials: true
 }));
 
