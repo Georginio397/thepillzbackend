@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: "http://192.168.1.5:3000",
+  origin: "https://thepillz-ab9m95ya5-georginio397s-projects.vercel.app",
   credentials: true
 }));
 
@@ -186,6 +186,8 @@ app.post("/winners/close-round", async (req, res) => {
   }
 });
 
-app.listen(4000, "0.0.0.0", () => {
-  console.log("🚀 Server started at http://192.168.1.5:4000");
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Server started on port ${PORT}`);
 });
